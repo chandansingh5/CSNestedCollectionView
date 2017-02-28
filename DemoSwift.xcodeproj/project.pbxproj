@@ -15,6 +15,8 @@
 		17DB3A131E62FB8600FEC481 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17DB3A111E62FB8600FEC481 /* LaunchScreen.storyboard */; };
 		17DB3A1E1E62FB8700FEC481 /* DemoSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DB3A1D1E62FB8700FEC481 /* DemoSwiftTests.swift */; };
 		17DB3A291E62FB8700FEC481 /* DemoSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DB3A281E62FB8700FEC481 /* DemoSwiftUITests.swift */; };
+		17DB3A371E65F73D00FEC481 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DB3A361E65F73D00FEC481 /* TableViewCell.swift */; };
+		17DB3A391E65F79C00FEC481 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DB3A381E65F79C00FEC481 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		17DB3A241E62FB8700FEC481 /* DemoSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17DB3A281E62FB8700FEC481 /* DemoSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoSwiftUITests.swift; sourceTree = "<group>"; };
 		17DB3A2A1E62FB8700FEC481 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17DB3A361E65F73D00FEC481 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewCell.swift; path = ../TableViewCell.swift; sourceTree = "<group>"; };
+		17DB3A381E65F79C00FEC481 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		17DB3A041E62FB8600FEC481 /* DemoSwift */ = {
 			isa = PBXGroup;
 			children = (
+				17DB3A361E65F73D00FEC481 /* TableViewCell.swift */,
 				17DB3A051E62FB8600FEC481 /* AppDelegate.swift */,
 				17DB3A071E62FB8600FEC481 /* ViewController.swift */,
 				17DB3A091E62FB8600FEC481 /* Main.storyboard */,
@@ -106,6 +111,7 @@
 				17DB3A111E62FB8600FEC481 /* LaunchScreen.storyboard */,
 				17DB3A141E62FB8600FEC481 /* Info.plist */,
 				17DB3A0C1E62FB8600FEC481 /* DemoSwift.xcdatamodeld */,
+				17DB3A381E65F79C00FEC481 /* CollectionViewCell.swift */,
 			);
 			path = DemoSwift;
 			sourceTree = "<group>";
@@ -265,7 +271,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17DB3A391E65F79C00FEC481 /* CollectionViewCell.swift in Sources */,
 				17DB3A081E62FB8600FEC481 /* ViewController.swift in Sources */,
+				17DB3A371E65F73D00FEC481 /* TableViewCell.swift in Sources */,
 				17DB3A061E62FB8600FEC481 /* AppDelegate.swift in Sources */,
 				17DB3A0E1E62FB8600FEC481 /* DemoSwift.xcdatamodeld in Sources */,
 			);
@@ -516,6 +524,7 @@
 				17DB3A2F1E62FB8700FEC481 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		17DB3A301E62FB8700FEC481 /* Build configuration list for PBXNativeTarget "DemoSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +533,7 @@
 				17DB3A321E62FB8700FEC481 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		17DB3A331E62FB8700FEC481 /* Build configuration list for PBXNativeTarget "DemoSwiftUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +542,7 @@
 				17DB3A351E62FB8700FEC481 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

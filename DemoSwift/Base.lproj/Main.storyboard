@@ -1,14 +1,34 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wwD-Dw-o4K">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="mFy-Nd-Te5">
+            <objects>
+                <navigationController id="wwD-Dw-o4K" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HZf-wA-VNN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KPg-dY-GB3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n59-nX-o61" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1231" y="-156"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="DemoSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +36,116 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="183" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oa7-PB-Bj1">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="145" id="tSq-Qi-jWX" customClass="TableViewCell" customModule="DemoSwift" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="145"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tSq-Qi-jWX" id="Oke-Te-BT6">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="144"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sjx-uC-nmx">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="144.5"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="bca-3u-EDX">
+                                                        <size key="itemSize" width="109" height="134.5"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="sGg-OF-EFI" customClass="CollectionViewCell" customModule="DemoSwift" customModuleProvider="target">
+                                                            <rect key="frame" x="5" y="5" width="109" height="134.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                                <rect key="frame" x="0.0" y="0.0" width="109" height="134.5"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rda-GW-iD5">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="109" height="134.5"/>
+                                                                    </imageView>
+                                                                </subviews>
+                                                            </view>
+                                                            <color key="backgroundColor" red="0.1590035457" green="0.8980392157" blue="0.71271897679999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstItem="rda-GW-iD5" firstAttribute="top" secondItem="sGg-OF-EFI" secondAttribute="top" id="4gL-iJ-LRe"/>
+                                                                <constraint firstAttribute="bottom" secondItem="rda-GW-iD5" secondAttribute="bottom" id="GZ6-zQ-Rmc"/>
+                                                                <constraint firstItem="rda-GW-iD5" firstAttribute="leading" secondItem="sGg-OF-EFI" secondAttribute="leading" id="Ip2-gp-Yta"/>
+                                                                <constraint firstAttribute="bottom" secondItem="rda-GW-iD5" secondAttribute="bottom" id="dhr-7I-7Cu"/>
+                                                                <constraint firstItem="rda-GW-iD5" firstAttribute="leading" secondItem="sGg-OF-EFI" secondAttribute="leading" id="qXw-rq-cTl"/>
+                                                                <constraint firstItem="rda-GW-iD5" firstAttribute="top" secondItem="sGg-OF-EFI" secondAttribute="top" id="uPt-Ue-aad"/>
+                                                                <constraint firstAttribute="trailing" secondItem="rda-GW-iD5" secondAttribute="trailing" id="vIW-Jf-oNd"/>
+                                                                <constraint firstAttribute="trailing" secondItem="rda-GW-iD5" secondAttribute="trailing" id="xCM-At-6ef"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="imageView" destination="rda-GW-iD5" id="Jwx-Nz-VS4"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="tSq-Qi-jWX" id="82E-Xi-Rgb"/>
+                                                        <outlet property="delegate" destination="tSq-Qi-jWX" id="ciX-BR-3wm"/>
+                                                    </connections>
+                                                </collectionView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="sjx-uC-nmx" firstAttribute="top" secondItem="Oke-Te-BT6" secondAttribute="top" id="B7c-8S-xws"/>
+                                                <constraint firstItem="sjx-uC-nmx" firstAttribute="leading" secondItem="Oke-Te-BT6" secondAttribute="leading" id="QRd-lb-7g0"/>
+                                                <constraint firstAttribute="trailing" secondItem="sjx-uC-nmx" secondAttribute="trailing" id="QhF-zg-qft"/>
+                                                <constraint firstAttribute="bottom" secondItem="sjx-uC-nmx" secondAttribute="bottom" id="YKR-tt-Ii8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="collectionView" destination="sjx-uC-nmx" id="Wn0-e2-Z95"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="KpY-Xm-XiR"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="FMR-au-XRk"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oa7-PB-Bj1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Voh-DJ-IV2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oa7-PB-Bj1" secondAttribute="bottom" id="Xxw-fC-EAZ"/>
+                            <constraint firstItem="oa7-PB-Bj1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="i0m-sT-H64"/>
+                            <constraint firstAttribute="trailing" secondItem="oa7-PB-Bj1" secondAttribute="trailing" id="zzJ-RD-BGC"/>
+                        </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="gQC-RB-9DG">
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="QGP-uZ-Bge">
+                            <connections>
+                                <action selector="addbtnAction:" destination="BYZ-38-t0r" id="XIV-vH-Eta"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="addButton" destination="QGP-uZ-Bge" id="Epg-41-xme"/>
+                        <outlet property="cancelButton" destination="ng5-j7-iyZ" id="O1Q-wy-Yxc"/>
+                        <outlet property="editButton" destination="mB1-SF-MGJ" id="e1b-UD-1kh"/>
+                        <outlet property="tableView" destination="oa7-PB-Bj1" id="9ri-Lu-j1T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <barButtonItem systemItem="edit" id="mB1-SF-MGJ">
+                    <connections>
+                        <action selector="editbtnAction:" destination="BYZ-38-t0r" id="Q9s-Mp-dav"/>
+                    </connections>
+                </barButtonItem>
+                <barButtonItem systemItem="cancel" id="ng5-j7-iyZ">
+                    <connections>
+                        <action selector="canclebtnAction:" destination="BYZ-38-t0r" id="ojL-5L-KEG"/>
+                    </connections>
+                </barButtonItem>
             </objects>
+            <point key="canvasLocation" x="-543" y="-156"/>
         </scene>
     </scenes>
 </document>
