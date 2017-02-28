@@ -13,4 +13,4 @@ SwiftCHCollectionTableView is an implementation of the nesting UICollectionView 
 
 # Animated Demo
 
-![output_amefjq](https://cloud.githubusercontent.com/assets/12164119/23435987/e95d7312-fe2e-11e6-913b-76ede8a3c092.gif)
+![output_bfbxzm](https://cloud.githubusercontent.com/assets/12164119/23436219/bc41c3fa-fe2f-11e6-8e53-e7ac24dfa93c.gif)
