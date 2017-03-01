@@ -1,7 +1,7 @@
 
 # SwiftCSCollectionTableView
 
-SwiftCHCollectionTableView is an implementation of the nesting UICollectionView inside UITableView as seen on many apps, like Gana, Netfilx or airbnb.
+SwiftCSCollectionTableView is an implementation of the nesting UICollectionView inside UITableView as seen on many apps, like Gana, Netfilx or airbnb.
 
 
 # Features
