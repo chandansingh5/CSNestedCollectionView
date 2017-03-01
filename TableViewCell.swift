@@ -11,7 +11,8 @@ import UIKit
 class TableViewCell: UITableViewCell {
     
     @IBOutlet weak var collectionView: UICollectionView!
-
+    var listSongs: [String]!
+   
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -39,6 +40,7 @@ extension TableViewCell : UICollectionViewDataSource,UICollectionViewDelegateFlo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
         cell.imageView.backgroundColor = self.getRandomColor()
+        cell.lblName.text = self.listSongs[indexPath.row]
         return cell
     }
     

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="CustomHeader" id="SXw-HO-hUI" customClass="CustomHeader" customModule="DemoSwift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="35"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5o-2w-agy">
+                    <rect key="frame" x="10" y="0.0" width="275" height="35"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJP-RW-5aG">
+                    <rect key="frame" x="295" y="0.0" width="80" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="ugb-LO-NOV"/>
+                    </constraints>
+                    <state key="normal" title="See All"/>
+                    <connections>
+                        <action selector="seeAllbtnAction:" destination="SXw-HO-hUI" eventType="touchUpInside" id="IWJ-OM-Cnn"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="vJP-RW-5aG" secondAttribute="trailing" id="6A9-6V-iZr"/>
+                <constraint firstItem="vJP-RW-5aG" firstAttribute="top" secondItem="SXw-HO-hUI" secondAttribute="top" id="6Kq-lE-fb9"/>
+                <constraint firstItem="D5o-2w-agy" firstAttribute="top" secondItem="SXw-HO-hUI" secondAttribute="top" id="MbL-es-tK2"/>
+                <constraint firstItem="vJP-RW-5aG" firstAttribute="leading" secondItem="D5o-2w-agy" secondAttribute="trailing" constant="10" id="Uv1-BM-1Zf"/>
+                <constraint firstAttribute="bottom" secondItem="vJP-RW-5aG" secondAttribute="bottom" id="d6T-5p-ZyS"/>
+                <constraint firstItem="D5o-2w-agy" firstAttribute="leading" secondItem="SXw-HO-hUI" secondAttribute="leading" constant="10" id="plb-54-Bde"/>
+                <constraint firstAttribute="bottom" secondItem="D5o-2w-agy" secondAttribute="bottom" id="vT3-Qb-FRa"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btnSeeAll" destination="vJP-RW-5aG" id="tw1-nq-y3B"/>
+                <outlet property="lblHeader" destination="D5o-2w-agy" id="wmA-Qs-mjs"/>
+            </connections>
+            <point key="canvasLocation" x="-116" y="135"/>
+        </view>
+    </objects>
+</document>

@@ -37,12 +37,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="183" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oa7-PB-Bj1">
-                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="145" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="oa7-PB-Bj1">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="145" id="tSq-Qi-jWX" customClass="TableViewCell" customModule="DemoSwift" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="145"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" rowHeight="145" id="tSq-Qi-jWX" customClass="TableViewCell" customModule="DemoSwift" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="56" width="375" height="145"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tSq-Qi-jWX" id="Oke-Te-BT6">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="144"/>
@@ -65,23 +65,32 @@
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rda-GW-iD5">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="109" height="134.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="109" height="109.5"/>
                                                                     </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Lf-Dl-ogj">
+                                                                        <rect key="frame" x="5" y="111.5" width="104" height="21"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="21" id="f2w-sb-7x9"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
                                                                 </subviews>
                                                             </view>
                                                             <color key="backgroundColor" red="0.1590035457" green="0.8980392157" blue="0.71271897679999996" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
-                                                                <constraint firstItem="rda-GW-iD5" firstAttribute="top" secondItem="sGg-OF-EFI" secondAttribute="top" id="4gL-iJ-LRe"/>
-                                                                <constraint firstAttribute="bottom" secondItem="rda-GW-iD5" secondAttribute="bottom" id="GZ6-zQ-Rmc"/>
-                                                                <constraint firstItem="rda-GW-iD5" firstAttribute="leading" secondItem="sGg-OF-EFI" secondAttribute="leading" id="Ip2-gp-Yta"/>
-                                                                <constraint firstAttribute="bottom" secondItem="rda-GW-iD5" secondAttribute="bottom" id="dhr-7I-7Cu"/>
-                                                                <constraint firstItem="rda-GW-iD5" firstAttribute="leading" secondItem="sGg-OF-EFI" secondAttribute="leading" id="qXw-rq-cTl"/>
-                                                                <constraint firstItem="rda-GW-iD5" firstAttribute="top" secondItem="sGg-OF-EFI" secondAttribute="top" id="uPt-Ue-aad"/>
-                                                                <constraint firstAttribute="trailing" secondItem="rda-GW-iD5" secondAttribute="trailing" id="vIW-Jf-oNd"/>
-                                                                <constraint firstAttribute="trailing" secondItem="rda-GW-iD5" secondAttribute="trailing" id="xCM-At-6ef"/>
+                                                                <constraint firstItem="2Lf-Dl-ogj" firstAttribute="top" secondItem="rda-GW-iD5" secondAttribute="bottom" constant="2" id="GO6-h1-A5w"/>
+                                                                <constraint firstItem="2Lf-Dl-ogj" firstAttribute="leading" secondItem="sGg-OF-EFI" secondAttribute="leading" constant="5" id="INA-vW-Ywx"/>
+                                                                <constraint firstItem="rda-GW-iD5" firstAttribute="top" secondItem="sGg-OF-EFI" secondAttribute="top" id="KUk-dw-ua5"/>
+                                                                <constraint firstAttribute="trailing" secondItem="2Lf-Dl-ogj" secondAttribute="trailing" id="osJ-yU-oI4"/>
+                                                                <constraint firstAttribute="bottom" secondItem="2Lf-Dl-ogj" secondAttribute="bottom" constant="2" id="sz9-j9-RgC"/>
+                                                                <constraint firstAttribute="trailing" secondItem="rda-GW-iD5" secondAttribute="trailing" id="tAK-ex-Rgh"/>
+                                                                <constraint firstItem="rda-GW-iD5" firstAttribute="leading" secondItem="sGg-OF-EFI" secondAttribute="leading" id="y8h-Al-49c"/>
                                                             </constraints>
                                                             <connections>
                                                                 <outlet property="imageView" destination="rda-GW-iD5" id="Jwx-Nz-VS4"/>
+                                                                <outlet property="lblName" destination="2Lf-Dl-ogj" id="aRv-8X-GaY"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
@@ -125,7 +134,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addButton" destination="QGP-uZ-Bge" id="Epg-41-xme"/>
                         <outlet property="cancelButton" destination="ng5-j7-iyZ" id="O1Q-wy-Yxc"/>
@@ -145,7 +154,7 @@
                     </connections>
                 </barButtonItem>
             </objects>
-            <point key="canvasLocation" x="-543" y="-156"/>
+            <point key="canvasLocation" x="-436" y="-156.07196401799101"/>
         </scene>
     </scenes>
 </document>

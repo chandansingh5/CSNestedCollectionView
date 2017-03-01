@@ -17,6 +17,8 @@
 		17DB3A291E62FB8700FEC481 /* DemoSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DB3A281E62FB8700FEC481 /* DemoSwiftUITests.swift */; };
 		17DB3A371E65F73D00FEC481 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DB3A361E65F73D00FEC481 /* TableViewCell.swift */; };
 		17DB3A391E65F79C00FEC481 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DB3A381E65F79C00FEC481 /* CollectionViewCell.swift */; };
+		17DB3A3F1E674D2A00FEC481 /* CustomHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17DB3A3E1E674D2A00FEC481 /* CustomHeader.xib */; };
+		17DB3A431E67508E00FEC481 /* CustomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DB3A421E67508E00FEC481 /* CustomHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		17DB3A2A1E62FB8700FEC481 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17DB3A361E65F73D00FEC481 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewCell.swift; path = ../TableViewCell.swift; sourceTree = "<group>"; };
 		17DB3A381E65F79C00FEC481 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		17DB3A3E1E674D2A00FEC481 /* CustomHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomHeader.xib; sourceTree = "<group>"; };
+		17DB3A421E67508E00FEC481 /* CustomHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +107,6 @@
 		17DB3A041E62FB8600FEC481 /* DemoSwift */ = {
 			isa = PBXGroup;
 			children = (
-				17DB3A361E65F73D00FEC481 /* TableViewCell.swift */,
 				17DB3A051E62FB8600FEC481 /* AppDelegate.swift */,
 				17DB3A071E62FB8600FEC481 /* ViewController.swift */,
 				17DB3A091E62FB8600FEC481 /* Main.storyboard */,
@@ -111,7 +114,10 @@
 				17DB3A111E62FB8600FEC481 /* LaunchScreen.storyboard */,
 				17DB3A141E62FB8600FEC481 /* Info.plist */,
 				17DB3A0C1E62FB8600FEC481 /* DemoSwift.xcdatamodeld */,
+				17DB3A361E65F73D00FEC481 /* TableViewCell.swift */,
 				17DB3A381E65F79C00FEC481 /* CollectionViewCell.swift */,
+				17DB3A3E1E674D2A00FEC481 /* CustomHeader.xib */,
+				17DB3A421E67508E00FEC481 /* CustomHeader.swift */,
 			);
 			path = DemoSwift;
 			sourceTree = "<group>";
@@ -245,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17DB3A131E62FB8600FEC481 /* LaunchScreen.storyboard in Resources */,
+				17DB3A3F1E674D2A00FEC481 /* CustomHeader.xib in Resources */,
 				17DB3A101E62FB8600FEC481 /* Assets.xcassets in Resources */,
 				17DB3A0B1E62FB8600FEC481 /* Main.storyboard in Resources */,
 			);
@@ -276,6 +283,7 @@
 				17DB3A371E65F73D00FEC481 /* TableViewCell.swift in Sources */,
 				17DB3A061E62FB8600FEC481 /* AppDelegate.swift in Sources */,
 				17DB3A0E1E62FB8600FEC481 /* DemoSwift.xcdatamodeld in Sources */,
+				17DB3A431E67508E00FEC481 /* CustomHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

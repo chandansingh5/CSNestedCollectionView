@@ -27,10 +27,22 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet var cancelButton: UIBarButtonItem!
 
-    var categorieArrays = ["Trading Songs", "Top Chard", "New Releases", "Recently Played"];
+    var categorieArrays = ["Trading Songs", "Top Chard", "New Releases", "Recently Played"]
+    var totalArrays = [Array<String>]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let nib = UINib(nibName: "CustomHeader", bundle: nil)
+        tableView.register(nib, forHeaderFooterViewReuseIdentifier:"CustomHeader")
+        
+
+        let tradingSongs = ["Aaron","Abdul","Abdullah","Abe","Abraham"]
+        let newReleases = ["Aaron","Abdul","Abdullah","Abe","Abraham"]
+        let topChard  = ["Aaron","Abdul","Abdullah","Abe","Abraham"]
+        let recentlyPlayed  = ["Aaron","Abdul","Abdullah","Abe","Abraham"]
+        
+        self.totalArrays = [tradingSongs, newReleases, topChard, recentlyPlayed]
+        
         self.tableView.allowsMultipleSelection = true
         self.navigationItem.rightBarButtonItem = self.editButton
         // Do any additional setup after loading the view, typically from a nib.
@@ -94,12 +106,27 @@ class ViewController: UIViewController {
 
 }
 
+extension ViewController : HeaderSeeAllDelegate {
+    
+    func buttonseeAllTapped(headerTag:Int){
+        
+    }
+}
+
 extension ViewController : UITableViewDataSource,UITableViewDelegate {
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return categorieArrays[section]
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat{
+        return 34;
     }
-    
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?{
+        let headerFooterView :CustomHeader = tableView.dequeueReusableHeaderFooterView(withIdentifier:"CustomHeader") as! CustomHeader
+        headerFooterView.lblHeader.text = categorieArrays[section]
+        headerFooterView.btnSeeAll.tag = section
+        headerFooterView.buttonseeAllDelegate = self
+        return headerFooterView;
+    }
+        
     func numberOfSections(in tableView: UITableView) -> Int {
         return categorieArrays.count
     }
@@ -109,19 +136,20 @@ extension ViewController : UITableViewDataSource,UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier:"Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier:"TableViewCell", for: indexPath) as!TableViewCell
+        cell.listSongs = self.totalArrays[indexPath.section]
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.updateNavigationBarButton()
     }
+    
   
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == UITableViewCellEditingStyle.delete) {
             self.showAlartView(tag: indexPath.section)
         }
     }
-    
 }
 
