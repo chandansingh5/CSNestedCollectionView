@@ -52,6 +52,8 @@ class ViewController: UIViewController {
         self.tableView.beginUpdates()
         self.tableView.insertSections(IndexSet(integer:self.categorieArrays.count), with:.bottom)
         let indextPath = IndexPath(row:0, section:(self.categorieArrays.count))
+        let recentlyPlayed  = ["Aaron","Abdul","Abdullah","Abe","Abraham"]
+        self.totalArrays.append(recentlyPlayed)
         self.categorieArrays.append("New Itme")
         self.tableView.endUpdates()
         self.tableView.scrollToRow(at:indextPath, at:.bottom , animated:true )
@@ -89,6 +91,7 @@ class ViewController: UIViewController {
                                                 preferredStyle: .actionSheet)
         let clearAction = UIAlertAction(title: "Ok", style: .destructive, handler: { (action:UIAlertAction!) in
             self.categorieArrays.remove(at:tag)
+            self.totalArrays.remove(at:tag)
             self.tableView.reloadData()
         })
         alertController.addAction(clearAction)
