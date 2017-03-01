@@ -13,5 +13,5 @@ SwiftCSCollectionTableView is an implementation of the nesting UICollectionView 
 
 # Animated Demo
 
-<img border="0" alt="W3Schools" src="https://cloud.githubusercontent.com/assets/12164119/23436219/bc41c3fa-fe2f-11e6-8e53-e7ac24dfa93c.gif" width="320" height="480">
+<img border="0" alt="W3Schools" src="https://cloud.githubusercontent.com/assets/12164119/23479622/14942f6e-feeb-11e6-9bb2-daefea0873d3.gif" width="320" height="480">
 
