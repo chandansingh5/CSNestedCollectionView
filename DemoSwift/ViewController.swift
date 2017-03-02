@@ -109,7 +109,7 @@ class ViewController: UIViewController {
 extension ViewController : HeaderSeeAllDelegate {
     
     func buttonseeAllTapped(headerTag:Int){
-        
+        print(headerTag)
     }
 }
 
