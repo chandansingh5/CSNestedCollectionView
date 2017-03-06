@@ -10,6 +10,8 @@ SwiftCSCollectionTableView is an implementation of the nesting UICollectionView 
 - [x] Add/Delete Sections UITableView 
 - [x] Swift 3 Compatible 
 - [x] Add Sections in bottom with dynamic scrolling
+- [x] Customizing UITableView Section Header :- UITableViewHeaderFooterView
+
 
 # Animated Demo
 
