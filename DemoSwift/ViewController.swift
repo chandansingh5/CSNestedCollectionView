@@ -8,46 +8,52 @@
 
 import UIKit
 
-extension UIBarButtonItem {
-    var hidden: Bool {
-        get {
-            return !self.isEnabled && self.tintColor == UIColor.clear
-        }
-        set {
-            self.tintColor = newValue ? UIColor.clear : nil
-            self.isEnabled = !newValue
-        }
-    }
-}
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var addButton: UIBarButtonItem!
     @IBOutlet weak var editButton: UIBarButtonItem!
-    @IBOutlet weak var tableView: UITableView!
     @IBOutlet var cancelButton: UIBarButtonItem!
+    @IBOutlet weak var tableView: UITableView!
 
     var categorieArrays = ["Trading Songs", "Top Chard", "New Releases", "Recently Played"]
     var totalArrays = [Array<String>]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // Do Default Setup
+        self.setDefaultData()
+        
+        self.registerNibforHeaderFooterView()
+        
+        // Do NavigationBar setup YES/NO
+        self.showNavigationBar(check: true)
+        
+    }
+
+    func registerNibforHeaderFooterView() {
         let nib = UINib(nibName: "CustomHeader", bundle: nil)
         tableView.register(nib, forHeaderFooterViewReuseIdentifier:"CustomHeader")
-        
-
+    }
+    
+    func setDefaultData(){
         let tradingSongs = ["Aaron","Abdul","Abdullah","Abe","Abraham"]
         let newReleases = ["Aaron","Abdul","Abdullah","Abe","Abraham"]
         let topChard  = ["Aaron","Abdul","Abdullah","Abe","Abraham"]
         let recentlyPlayed  = ["Aaron","Abdul","Abdullah","Abe","Abraham"]
-        
         self.totalArrays = [tradingSongs, newReleases, topChard, recentlyPlayed]
-        
-        self.tableView.allowsMultipleSelection = true
-        self.navigationItem.rightBarButtonItem = self.editButton
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
+    func showNavigationBar(check:Bool){
+        if check {
+            self.tableView.allowsMultipleSelection = true
+            self.navigationItem.rightBarButtonItem = self.editButton
+            self.navigationItem.leftBarButtonItem = self.addButton
+        }
+    }
+    
+    
     @IBAction func addbtnAction(_ sender: Any) {
         self.tableView.beginUpdates()
         self.tableView.insertSections(IndexSet(integer:self.categorieArrays.count), with:.bottom)
@@ -84,9 +90,7 @@ class ViewController: UIViewController {
     }
     
     func showAlartView(tag:Int){
-        // Create message
-        let alertController = UIAlertController(title: "Alert!",  message: "You want to delete this section",
-                                                preferredStyle: .actionSheet)
+        let alertController = UIAlertController(title: "Alert!",  message: "You want to delete this section",preferredStyle: .actionSheet)
         let clearAction = UIAlertAction(title: "Ok", style: .destructive, handler: { (action:UIAlertAction!) in
             self.categorieArrays.remove(at:tag)
             self.tableView.reloadData()
@@ -106,12 +110,16 @@ class ViewController: UIViewController {
 
 }
 
+// MARK: - HeaderSeeAllDelegate
+
 extension ViewController : HeaderSeeAllDelegate {
     
     func buttonseeAllTapped(headerTag:Int){
         print(headerTag)
     }
 }
+
+// MARK: - UITableViewDataSource, UITableViewDelegate
 
 extension ViewController : UITableViewDataSource,UITableViewDelegate {
     
@@ -153,3 +161,14 @@ extension ViewController : UITableViewDataSource,UITableViewDelegate {
     }
 }
 
+extension UIBarButtonItem {
+    var hidden: Bool {
+        get {
+            return !self.isEnabled && self.tintColor == UIColor.clear
+        }
+        set {
+            self.tintColor = newValue ? UIColor.clear : nil
+            self.isEnabled = !newValue
+        }
+    }
+}
