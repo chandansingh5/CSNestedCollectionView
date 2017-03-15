@@ -100,27 +100,25 @@ class ViewController: UIViewController {
         alertController.addAction(cancelAction)
         self.present(alertController,    animated: true, completion:nil)
     }
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
 // MARK: - HeaderSeeAllDelegate
-
 extension ViewController : HeaderSeeAllDelegate {
-    
     func buttonseeAllTapped(headerTag:Int){
-        print(headerTag)
+        let nvController =  UINavigationController()
+        let vController: SongsViewController = storyboard!.instantiateViewController(withIdentifier: "SongsViewController") as UIViewController as! SongsViewController
+        vController.songArray = self.totalArrays[headerTag] 
+        nvController.viewControllers = [vController]
+       self.present(nvController, animated:true, completion:nil)
     }
 }
 
 // MARK: - UITableViewDataSource, UITableViewDelegate
-
 extension ViewController : UITableViewDataSource,UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat{

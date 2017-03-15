@@ -12,7 +12,7 @@ class TableViewCell: UITableViewCell {
     
     @IBOutlet weak var collectionView: UICollectionView!
     var listSongs: [String]!
-   
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,9 +20,9 @@ class TableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
+    
     func getRandomColor() -> UIColor{
         let randomRed:CGFloat = CGFloat(drand48())
         let randomGreen:CGFloat = CGFloat(drand48())
@@ -49,6 +49,5 @@ extension TableViewCell : UICollectionViewDataSource,UICollectionViewDelegateFlo
         let itemHeight = self.frame.height - 10
         return CGSize(width: itemWidth, height: itemHeight)
     }
-    
 }
 
